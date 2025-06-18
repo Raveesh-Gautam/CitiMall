@@ -11,7 +11,7 @@ const io = new Server(httpServer, {
   cors: { origin: '*' },
 });
 
-let bids = []; // In-memory bid storage
+let bids = []; 
 
 io.on('connection', (socket) => {
   console.log('User connected:', socket.id);
