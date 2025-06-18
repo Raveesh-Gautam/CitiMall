@@ -4,7 +4,12 @@ const { Server } = require('socket.io');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://citi-mall-xhw6.vercel.app/', 
+  credentials: true,
+}));
+
 
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
